@@ -1,0 +1,27 @@
+<%- include("./partials/header") %>
+
+<div class="ui main text container">
+<h1 style="text-align: center">Forgot your password? </h1>
+<div style="width:80%; margin: 25px auto ">
+	<form action="/forgot" method="POST">
+		<div class="ui inverted segment">
+  <div class="ui inverted form">
+	<div class=" field">
+        <label>Email</label>
+
+<input type="email" name="email" placeholder="Put your email here">
+	  </div>
+			
+				<button class=" positive ui button fluid ui button">
+	 Reset Password
+	</button>
+	  
+	  
+			</div>
+		</div>
+		</form>
+			
+			</div>
+</div>
+
+<%- include("./partials/footer") %>

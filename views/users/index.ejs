@@ -1,0 +1,41 @@
+<%- include("../partials/header") %>
+    
+ <div class="ui main text container">
+<div class="ui card">
+  <a class="image" href="#link">
+    <img src="<%=user.avatar%>">
+  </a>
+  <div class="content">
+    <a class="header"><%= user.firstName%>  <%=user.lastName%></a>
+    <div class="meta">
+      <a class="email" href="mailto:<%=user.email%>"><%=user.email%></a>
+    </div>
+  </div>
+</div>
+
+	 
+	
+
+<div class="ui very relaxed items">
+	<% blogs.forEach(function(blog){%>
+  <div class="item">
+    <div class="image">
+      <img src="<%=blog.image%>">
+    </div>
+    <div class="content">
+      <a class="ui header" href="/blogs/<%=blog.id%>"><%=blog.title%></a>
+      <div class="description">
+        <p><%= blog.description.substring(0,100); %></p>
+      </div>
+    </div>
+  </div>
+	<%});%>
+  
+  </div>
+</div>
+
+
+
+
+
+<%- include("../partials/footer") %>

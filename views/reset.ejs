@@ -1,0 +1,24 @@
+<%- include("./partials/header") %>
+
+<div class="ui main text container">
+<h1 style="text-align: center">Password Reset </h1>
+<div style="width:80%; margin: 25px auto ">
+		<form action="/reset/<%= token %>" method="POST">
+		  <div class="ui inverted segment">
+			  <div class="ui inverted form">
+			<div class="field">
+			  <label for="confirm">New Password</label>
+			<input type="password" name="password" value="" placeholder="New password" autofocus="autofocus">
+			</div>
+		  <div class="field">
+		    <label for="confirm">Confirm Password</label>
+		    <input type="password" name="confirm" value="" placeholder="Confirm password" >
+		  </div>
+			
+		    <button type="submit" class="positive ui button fluid ui button">Update Password</button>
+			  </div>
+	</div>
+		</form>
+	</div>
+</div>
+<%- include("./partials/footer") %>

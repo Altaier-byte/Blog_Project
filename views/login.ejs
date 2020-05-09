@@ -1,0 +1,31 @@
+<%- include("./partials/header") %>
+
+
+<div class="ui main text container">
+<h1 style="text-align: center">Login </h1>
+<div style="width:60%; margin: 25px auto ">
+<form action="/login" method="POST">
+	<div class="ui inverted segment">
+  <div class="ui inverted form">
+	<div class=" field">
+		
+        <label>Username</label>
+        <input name="username" placeholder="Username" type="text">
+      </div>
+		
+	<div class="field">
+        <label>Password</label>
+        <input name="password" type="password" placeholder="Password">
+      </div>
+    
+<button class=" ui inverted green basic button fluid ui button">
+	 Submit
+	</button>
+
+
+  </div>
+</div>
+ </form>   
+</div>
+	<div>
+<%- include("./partials/footer") %>
