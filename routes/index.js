@@ -200,11 +200,11 @@ router.post('/reset/:token', function(req, res) {
 //User routes
 router.get("/users/:id", function(req,res){
 	User.findById(req.params.id, function(err, foundUser){
-		if(err){
-			req.flash("error",err.message);
+		if(err|| !foundUser){
+			req.flash("error","User not found");
 			res.redirect("/blogs");
 		}
-		Blog.find().where('author.id').equals(foundUser._id).exec(function(err,userBlogs){
+		Blog.find().where('author.id').equals(foundUser._id).exec(function(err, userBlogs){
 			if(err){
 				req.flash("error", "Blog not found");
 				res.redirect("/blogs");
@@ -215,6 +215,10 @@ router.get("/users/:id", function(req,res){
 	});
 });
 
+router.get("/about", function(req, res){
+	
+	res.render("about");	
+	});
 
 
 module.exports = router;
