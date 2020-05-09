@@ -24,7 +24,7 @@ mongoose.connect('mongodb+srv://Yelp:s2jLq0DBM6MqnrnM@cluster00-evx9o.mongodb.ne
 }).catch(err => {
 	console.log('ERROR:', err.message);
 });
-// mongoose.connect("mongodb://localhost/Blog_Project_V1",{useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true });
+ // mongoose.connect("mongodb://localhost/Blog_Project_V1",{useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true });
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(expressSanitizer());
